@@ -4,12 +4,12 @@
       <span class="mdl-layout-title">Notowania giełdowe</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a href="#" class="mdl-navigation__link">Panel kontrolny</a>
-        <a href="#" class="mdl-navigation__link">Zarządzaj</a>
+        <a class="mdl-navigation__link" [routerLink]="['/']">Panel kontrolny</a>
+        <a class="mdl-navigation__link" [routerLink]="['/zarzadzaj']">Zarządzaj</a>
       </nav>
     </div>
   </header>
-  <main class="mdl-layout__content" style="padding: 20px;" *ngIf="stocks">
-    <summary [stock]="stocks[0]"></summary>
+  <main class="mdl-layout__content" style="padding: 20px;">
+    <router-outlet></router-outlet>
   </main>
 </div>
